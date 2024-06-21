@@ -1,6 +1,6 @@
 # About Tic Tac Toes
-![pygame version gif](pygame.gif)
-![cmd version gif](cmd.gif)
+![pygame version gif](/showcase_gifs/pygame.gif)
+![cmd version gif](/showcase_gifs/cmd.gif)
 
 ### -- General info --
 During the first half of 2023, I've created a cmd based tic tac toe.
