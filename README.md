@@ -1,4 +1,7 @@
 # About Tic Tac Toes
+![pygame version gif](pygame.gif)
+![cmd version gif](cmd.gif)
+
 ### -- General info --
 During the first half of 2023, I've created a cmd based tic tac toe.
 As a result of that, decision was made that the next good challenge would be to make a
