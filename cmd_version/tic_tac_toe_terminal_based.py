@@ -1,5 +1,10 @@
-# Tic Tac Toe text based game
+""" -------------------------------------------------- """
+""" >>>> Tic-Tac-Toe Text Based Terminal/Cmd Game <<<< """
+""" -------------------------------------------------- """
 
+"""
+-> Current game match state tracking.
+"""
 g_board_values_list = []
 for i in range(9):
     g_board_values_list.append(" ")
@@ -8,6 +13,9 @@ g_player_2 = ""
 
 
 def board_print(board):
+    """
+    -> Board state printing 
+    """
     i = board
     print(f"▲▲▲▲▲▲▲▲▲▲▲▲▲")
     print(f"| {i[6]} | {i[7]} | {i[8]} |")
@@ -19,12 +27,18 @@ def board_print(board):
 
 
 def how_to_play():
+    """
+    -> Initial game instructions.
+    """
     print("These are the controls of the game.\nEach number represents a spot on a board." +
           "\n type numbers 1 to 9 to select where to place X or O during your turn.")
     board_print(g_board_values_list)
 
 
 def set_up():
+    """
+    -> Taking in player 1 and 2 names.
+    """
     global g_player_1, g_player_2
     print("---- This is a Tic Tac Toe game ----")
     how_to_play()
@@ -33,6 +47,10 @@ def set_up():
 
 
 def players_input(is_it_x_or_o, player_name):
+    """
+    -> Requesting player input for X/O placement location.
+    -> Checking if it's a digit from 1 to 9.
+    """
     while True:
         i = input(
             f"{player_name.title()} where would you like to place {is_it_x_or_o}?\n")
@@ -48,6 +66,10 @@ def players_input(is_it_x_or_o, player_name):
 
 
 def game_victory_checking(is_it_x_or_o, player_name):
+    """
+    -> Checking if someone has won the match.
+    -> Printing winning players name.
+    """
     global g_game_loop
     i = g_board_values_list
     k = is_it_x_or_o
@@ -63,6 +85,9 @@ def game_victory_checking(is_it_x_or_o, player_name):
 
 
 def no_winner_checking():
+    """
+    -> Checking if a game match is a draw.
+    """
     global g_game_loop
     if " " not in g_board_values_list:
         print("Looks like it's a draw.")
@@ -70,6 +95,9 @@ def no_winner_checking():
 
 
 def play_again():
+    """
+    -> Handling new game match start or exiting of the game, depending on user input.
+    """
     global g_main_program_loop, g_board_values_list
     while True:
         play_again_prompt = input("Would you like to play again? Y/N\n> ")
@@ -85,26 +113,29 @@ def play_again():
         else:
             print("Wrong input. Try again.")
 
-
-# >>>>>>>>>>>>> This is the game loop: <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+""" ----------------------------------------------- """
+""" >>>>>>>>>>>>> Main Game/App Loop: <<<<<<<<<<<<< """
+""" ----------------------------------------------- """
 g_main_program_loop = True
 while g_main_program_loop == True:
-    # set_up() prints out a game board once for player referance
     set_up()
     g_game_loop = True
     while g_game_loop == True:
-        # x_input()
+        # X turn handling:
         players_input("X", g_player_1)
         board_print(g_board_values_list)
         game_victory_checking("X", g_player_1)
         if g_game_loop == False:
             break
-        # o_input()
+        # --- End ---
+        # O turn handling:
         players_input("O", g_player_2)
         board_print(g_board_values_list)
         game_victory_checking("O", g_player_2)
         if g_game_loop == False:
             break
+        # --- End ---
+    # Match aftermath handling:
     play_again()
     if g_main_program_loop == False:
         break
