@@ -12,9 +12,11 @@ g_player_1 = ""
 g_player_2 = ""
 
 
-def board_print(board):
+def board_print(board: list):
     """
-    -> Board state printing 
+    -> Board state printing.
+    -> Parameters:
+        ->  board - list that represents the current state of the game board.
     """
     i = board
     print(f"▲▲▲▲▲▲▲▲▲▲▲▲▲")
@@ -28,7 +30,7 @@ def board_print(board):
 
 def how_to_play():
     """
-    -> Initial game instructions.
+    -> Prints initial game instructions.
     """
     print("These are the controls of the game.\nEach number represents a spot on a board." +
           "\n type numbers 1 to 9 to select where to place X or O during your turn.")
@@ -37,7 +39,7 @@ def how_to_play():
 
 def set_up():
     """
-    -> Taking in player 1 and 2 names.
+    -> Prompts players to enter their names and prints game instructions.
     """
     global g_player_1, g_player_2
     print("---- This is a Tic Tac Toe game ----")
@@ -46,10 +48,14 @@ def set_up():
     g_player_2 = input("Tell me who will be playing as O?\n")
 
 
-def players_input(is_it_x_or_o, player_name):
+def players_input(is_it_x_or_o: str, player_name: str):
     """
-    -> Requesting player input for X/O placement location.
-    -> Checking if it's a digit from 1 to 9.
+    -> Requests players move.
+    -> Validates players input (digit 1 to 9).
+    -> Updates game board state.
+    -> Parameters:
+        -> is_it_x_or_o - "X" or "O" string turn marker.
+        -> player_name - string of a current player name.
     """
     while True:
         i = input(
@@ -65,10 +71,12 @@ def players_input(is_it_x_or_o, player_name):
             continue
 
 
-def game_victory_checking(is_it_x_or_o, player_name):
+def game_victory_checking(is_it_x_or_o: str, player_name:str):
     """
-    -> Checking if someone has won the match.
-    -> Printing winning players name.
+    -> Checking if someone has won the match and print the result.
+    -> Parameters:
+        -> is_it_x_or_o - "X" or "O" string turn marker.
+        -> player_name - string of a current player name.
     """
     global g_game_loop
     i = g_board_values_list
@@ -86,7 +94,7 @@ def game_victory_checking(is_it_x_or_o, player_name):
 
 def no_winner_checking():
     """
-    -> Checking if a game match is a draw.
+    -> Checking if a game match is a draw and updating game loop state.
     """
     global g_game_loop
     if " " not in g_board_values_list:
@@ -96,7 +104,8 @@ def no_winner_checking():
 
 def play_again():
     """
-    -> Handling new game match start or exiting of the game, depending on user input.
+    -> Prompts players to choose if they want to play again.
+        -> If so, resets game board state, otherwise prepares to quit the game.
     """
     global g_main_program_loop, g_board_values_list
     while True:
