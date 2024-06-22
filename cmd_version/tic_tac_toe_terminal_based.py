@@ -81,11 +81,16 @@ def game_victory_checking(is_it_x_or_o: str, player_name:str):
     global g_game_loop
     i = g_board_values_list
     k = is_it_x_or_o
-    if (i[0] == k and i[1] == k and i[2] == k) or (i[0] == k and i[3] == k and i[6] == k) or (i[6] == k and i[7] == k and i[8] == k):
+    if ((i[0] == k and i[1] == k and i[2] == k) or
+        (i[0] == k and i[3] == k and i[6] == k) or 
+        (i[6] == k and i[7] == k and i[8] == k)):
         g_game_loop = False
-    elif (i[3] == k and i[4] == k and i[5] == k) or (i[1] == k and i[4] == k and i[7] == k) or (i[2] == k and i[5] == k and i[8] == k):
+    elif ((i[3] == k and i[4] == k and i[5] == k) or
+          (i[1] == k and i[4] == k and i[7] == k) or
+          (i[2] == k and i[5] == k and i[8] == k)):
         g_game_loop = False
-    elif (i[0] == k and i[4] == k and i[8] == k) or (i[2] == k and i[4] == k and i[6] == k):
+    elif ((i[0] == k and i[4] == k and i[8] == k) or
+          (i[2] == k and i[4] == k and i[6] == k)):
         g_game_loop = False
     if g_game_loop == False:
         print(f"{is_it_x_or_o} wins!\nGood job {player_name}.")
