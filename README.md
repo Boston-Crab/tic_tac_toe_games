@@ -10,9 +10,9 @@ One is simply terminal based and the other was made with the Pygame library, is 
 Youtube video link, in which you can observe the Pygame version:
        https://youtu.be/Pcxl-vHrre8?si=jyYthsc1vL5wqJnH
 
-### -- Instructions --
+### -- Access Instructions --
 - Terminal based game requires just python3
-- For Pygame version:<br>
+- For Pygame version, you have to install virtual environment and requirements.txt:<br>
   `
   python -m venv venv
   `<br>
