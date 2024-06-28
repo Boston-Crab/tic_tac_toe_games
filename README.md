@@ -3,10 +3,25 @@
 ![cmd version gif](/showcase_gifs/cmd.gif)
 
 ### -- General info --
-These two game projects were created to test my understanding of
-Python fundamentals and to improve my ability to write good
-documentation.
 
+These 2 Tic Tac Toe game where made to test my python basics understanding. <br> 
+One is simply terminal based and the other was made with the Pygame library, is fully controlled by mouse input and utilizes audio and image assets.  
+
+Youtube video link, in which you can observe the Pygame version:
+       https://youtu.be/Pcxl-vHrre8?si=jyYthsc1vL5wqJnH
+
+### -- Instructions --
+- Terminal based game requires just python3
+- For Pygame version:<br>
+  `
+  python -m venv venv
+  `<br>
+  `
+  For Linux: source venv/bin/activate or for Windows: .\venv\Scripts\activate
+  `<br>
+  `
+  pip install -r requirements.txt
+  `
 
 ### -- Outcome --
 
