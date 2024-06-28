@@ -2,7 +2,7 @@
 ![pygame version gif](/showcase_gifs/pygame.gif)
 ![cmd version gif](/showcase_gifs/cmd.gif)
 
-### -- General info --
+### -- General Info --
 
 These 2 Tic Tac Toe game where made to test my python basics understanding. <br> 
 One is simply terminal based and the other was made with the Pygame library, is fully controlled by mouse input and utilizes audio and image assets.  
