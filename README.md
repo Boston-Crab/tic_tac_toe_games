@@ -7,9 +7,6 @@
 These 2 Tic Tac Toe game where made to test my python basics understanding. <br> 
 One is simply terminal based and the other was made with the Pygame library, is fully controlled by mouse input and utilizes audio and image assets.  
 
-Youtube video link, in which you can observe the Pygame version:
-       https://youtu.be/Pcxl-vHrre8?si=jyYthsc1vL5wqJnH
-
 ### -- Access Instructions --
 - Terminal based game requires just python3
 - For Pygame version, you have to install virtual environment and requirements.txt:<br>
