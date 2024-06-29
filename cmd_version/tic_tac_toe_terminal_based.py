@@ -1,7 +1,8 @@
-""" -------------------------------------------------- """
-
-""" >>>> Tic-Tac-Toe Text Based Terminal/Cmd Game <<<< """
-""" -------------------------------------------------- """
+"""
+--------------------------------------------------
+>>>> Tic-Tac-Toe Text Based Terminal/Cmd Game <<<<
+-------------------------------------------------- 
+"""
 
 """
 -> Current game match state tracking.
@@ -68,7 +69,8 @@ def players_input(is_it_x_or_o: str, player_name: str):
 
     while True:
         i = input(
-            f"{player_name.title()} where would you like to place {is_it_x_or_o}?\n"
+            f"{player_name.title()} where would you like to place {
+                is_it_x_or_o}?\n"
         )
 
         if (not i.isdigit()) or (int(i) not in range(1, 10)):
