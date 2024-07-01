@@ -1,6 +1,6 @@
 # About Tic Tac Toes
-![pygame version gif](/showcase_gifs/pygame.gif)
-![cmd version gif](/showcase_gifs/cmd.gif)
+![pygame version gif](/showcase_assets/pygame.gif)
+![cmd version gif](/showcase_assets/cmd.gif)
 
 ### -- General Info --
 
