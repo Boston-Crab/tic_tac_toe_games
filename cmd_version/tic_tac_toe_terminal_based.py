@@ -8,9 +8,7 @@
 -> Current game match state tracking.
 """
 
-g_board_values_list = []
-for i in range(9):
-    g_board_values_list.append(" ")
+g_board_values_list = [" "] * 9
 g_player_1 = ""
 g_player_2 = ""
 
@@ -148,30 +146,32 @@ def play_again():
             print("Wrong input. Try again.")
 
 
-""" ----------------------------------------------- """
-""" >>>>>>>>>>>>> Main Game/App Loop: <<<<<<<<<<<<< """
-""" ----------------------------------------------- """
+"""
+-----------------------------------------------
+>>>>>>>>>>>>> Main Game/App Loop: <<<<<<<<<<<<<
+-----------------------------------------------
+"""
 
-g_main_program_loop = True
-while g_main_program_loop is True:
-    set_up()
-    g_game_loop = True
-    while g_game_loop is True:
-        # X turn handling:
-        players_input("X", g_player_1)
-        board_print(g_board_values_list)
-        game_victory_checking("X", g_player_1)
-        if g_game_loop is False:
+def main():
+    global g_main_program_loop, g_game_loop
+    g_main_program_loop = True
+    while g_main_program_loop is True:
+        set_up()
+        g_game_loop = True
+        while g_game_loop is True:
+            players_input("X", g_player_1)
+            board_print(g_board_values_list)
+            game_victory_checking("X", g_player_1)
+            if g_game_loop is False:
+                break
+            players_input("O", g_player_2)
+            board_print(g_board_values_list)
+            game_victory_checking("O", g_player_2)
+            if g_game_loop is False:
+                break
+        play_again()
+        if g_main_program_loop is False:
             break
-        # --- End ---
-        # O turn handling:
-        players_input("O", g_player_2)
-        board_print(g_board_values_list)
-        game_victory_checking("O", g_player_2)
-        if g_game_loop is False:
-            break
-        # --- End ---
-    # Match aftermath handling:
-    play_again()
-    if g_main_program_loop is False:
-        break
+
+if __name__ == "__main__":
+    main()
