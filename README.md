@@ -22,10 +22,9 @@ One is simply terminal based and the other was made with the Pygame library, is 
 
 ### -- Outcome --
 
-Due to this project, I have learn about:
-1. Mouse tracking.
+Due to this project, I learned about:
+1. Mouse position tracking and clicks handling.
 1. How to import and use static assest in pygame library
 1. Different ways of tracking the current game state.
 1. How to devide program/game-window pixel area into desired smaller pieces/chunks.
-1. Importance of making a seperate function for each feature of the project.
-2. Writing Documentation that follows industry standarts.
+2. Importance of Documentation.
